@@ -55,9 +55,9 @@ def create_camd_model(weights=None):
     model.VALENCY_GC = pyo.Param(model.G, initialize={k: v[7] for k, v in GROUP_DATA.items()}, doc='Contribución de Valencias')
 
     # Pesos para la Función Objetivo
-    model.w_RED = pyo.Param(initialize=weights['RED'], doc='Peso para RED')
-    model.w_Cp_spec = pyo.Param(initialize=weights['Cp_spec'], doc='Peso para Cp específico')
-    model.w_Density = pyo.Param(initialize=weights['Density'], doc='Peso para Densidad')
+    model.w_RED = pyo.Param(initialize=weights['RED'], doc='weight of RED')
+    model.w_Cp_spec = pyo.Param(initialize=weights['Cp_spec'], doc='weight of Cp specific')
+    model.w_Density = pyo.Param(initialize=weights['Density'], doc='weight of Density')
 
 
     # --- VARIABLES ---
